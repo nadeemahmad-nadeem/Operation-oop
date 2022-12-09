@@ -1,0 +1,156 @@
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        public class calculator
+        {
+
+
+        }
+        public class addition : calculator
+        {
+            public int add(int a, int b)
+            {
+                Console.WriteLine(a + b);
+                return 0;
+            }
+            public int add(int a, int b, int c)
+            {
+                Console.WriteLine(a + b + c);
+                return 0;
+            }
+            public int add(int a, int b, int c, int d)
+            {
+                Console.WriteLine(a + b + c + d);
+                return 0;
+            }
+
+        }
+        public class subtraction : calculator
+        {
+            public int substraction(int a, int b)
+            {
+                Console.WriteLine(a - b);
+                return 0;
+            }
+            public int substraction(int a, int b, int c)
+            {
+                Console.WriteLine(a - b - c);
+                return 0;
+            }
+            public int substraction(int a, int b, int c, int d)
+            {
+                Console.WriteLine(a - b - c - d);
+                return 0;
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            addition Addition = new addition();
+            subtraction sub = new subtraction();
+
+            Console.WriteLine("enter 1 for addition:");
+            Console.WriteLine("enter 2 for substraction:");
+            int x = Convert.ToInt32(Console.ReadLine());
+            switch (x)
+            {
+                case 0:
+                    Console.WriteLine("invalid operation");
+                    break;
+                case 1:
+                    Console.WriteLine("how many values you want to enter");
+                    int z = Convert.ToInt32(Console.ReadLine());
+                    if (z == 2)
+
+                    {
+                        Console.WriteLine("enter the value of first no");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of second no");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Addition of two numbers is  ");
+                        Addition.add(a, b);
+
+                    }
+                    else if (z == 3)
+                    {
+                        Console.WriteLine("enter the value of first no");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of second no");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of third no");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Addition of three numbers is ");
+                        Addition.add(a, b, c);
+                    }
+                    else if (z == 4)
+                    {
+                        Console.WriteLine("enter the value of first no");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of second no");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of third no");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of fourth no");
+                        int d = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Addition of four numbers  is  ");
+                        Addition.add(a, b, c, d);
+                    }
+                    else
+
+                        Console.WriteLine("");
+                    break;
+                case 2:
+                    Console.WriteLine("how many values you want to enter");
+                    int y = Convert.ToInt32(Console.ReadLine());
+
+                    if (y == 2)
+                    {
+                        Console.WriteLine("enter the value of first no");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of second no");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("subtraction of two numbers is ");
+                        sub.substraction(a, b);
+                    }
+                    else if (y == 3)
+                    {
+                        Console.WriteLine("enter the value of first no");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of second no");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of third no");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("subtraction of three numbers is  ");
+                        sub.substraction(a, b, c);
+                    }
+                    else if (y == 4)
+                    {
+                        Console.WriteLine("enter the value of first no");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of second no");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of third no");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("enter the value of fourth no");
+                        int d = Convert.ToInt32(Console.ReadLine());                       
+                        Console.WriteLine("subtraction of four numbers is  ");
+                        sub.substraction(a,b,c,d);
+                       
+
+
+                    }
+                    else
+                    {
+                        // block of code to be executed if the condition1 is false and condition2 is False
+                    }
+                    break;
+
+
+
+            }
+        }
+    }
+}
